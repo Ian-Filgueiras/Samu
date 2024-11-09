@@ -22,7 +22,7 @@ class ProntuarioController extends Controller
             'procedimentos' => 'nullable|string',
             'medicacoes' => 'nullable|string',
             'diagnostico_previo' => 'nullable|string',
-            'gravidade' => 'required|string',
+            'gravidade_id' => 'required|exists:gravidades,id',
         ]);
 
         Prontuario::create([
@@ -33,7 +33,7 @@ class ProntuarioController extends Controller
             'procedimentos' => $request->input('procedimentos'),
             'medicacoes' => $request->input('medicacoes'),
             'diagnostico_previo' => $request->input('diagnostico_previo'),
-            'gravidade' => $request->input('gravidade'),
+            'gravidade_id' => $request->input('gravidade_id'),
         ]);
 
         return redirect()->route('prontuario.create')->with('success', 'Prontuário salvo com sucesso!');

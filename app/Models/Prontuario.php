@@ -18,7 +18,12 @@ class Prontuario extends Model
         'procedimentos',
         'medicacoes',
         'diagnostico_previo',
-        'gravidade',
+        'gravidade_id',
     ];
+
+    public function gravidade()
+    {
+        return $this->belongsTo(Gravidade::class);
+    }
 
 }
