@@ -21,4 +21,11 @@ class HospitalController extends Controller
         $hospital = Hospital::findOrFail($id);
         return view('hospitals.show', compact('hospital'));
     }
+
+    public function alterarLeito($id)
+    {
+        $hospital = Hospital::findOrFail($id);
+        
+        return view('prontuario.lista', compact('hospital'));
+    }
 }
