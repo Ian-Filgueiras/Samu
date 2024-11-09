@@ -20,4 +20,5 @@ class Prontuario extends Model
         'diagnostico_previo',
         'gravidade',
     ];
+
 }
