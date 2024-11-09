@@ -9,7 +9,7 @@ class ProntuarioController extends Controller
     public function index()
     {
 
-        $prontuarios = Prontuario::all();
+        $prontuarios = Prontuario::orderBy('gravidade', 'desc')->get();
 
         return view('prontuario.lista', compact('prontuarios'));
     }
