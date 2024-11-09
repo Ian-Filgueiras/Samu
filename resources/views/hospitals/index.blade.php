@@ -20,7 +20,7 @@
                     <h3 class="h5 mb-2" style="color: #007bff;">{{ $hospital->name }}</h3>
                     <p class="mb-1"><strong>Localização:</strong> {{ $hospital->location }}</p>
                     <p class="mb-1"><strong>Leitos Disponíveis:</strong> {{ $hospital->available_beds }} / {{ $hospital->total_beds }}</p>
-                    <a href="{{ url('/hospitals/' . $hospital->id) }}" class="btn btn-outline-primary btn-sm mt-2">Localização</a>
+                    <a href="https://www.google.com/maps?q={{ $hospital->latitude }},{{ $hospital->longitude }}" target="_blank">Iniciar Rota</a>
                 </li>
             @endforeach
         </ul>
