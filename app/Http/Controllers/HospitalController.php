@@ -22,10 +22,19 @@ class HospitalController extends Controller
         return view('hospitals.show', compact('hospital'));
     }
 
-    public function alterarLeito($id)
+    public function alterarLeito(Request $request, $id)
     {
+       
         $hospital = Hospital::findOrFail($id);
+
         
-        return view('prontuario.lista', compact('hospital'));
+        $hospital->leito = $request->input('leito');
+
+        
+        $hospital->save();
+
+        
+        return redirect()->route('hospitals.show', $hospital->id)
+            ->with('success', 'Leito alterado com sucesso.');
     }
 }

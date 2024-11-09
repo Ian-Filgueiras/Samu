@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 
 class ProntuarioController extends Controller
 {
+
+    public function index()
+{
+    
+    $prontuarios = Prontuario::all();
+    
+    
+    return view('prontuario.lista', compact('prontuarios'));
+}
     public function create()
     {
         return view('prontuario.create');
@@ -38,4 +47,7 @@ class ProntuarioController extends Controller
 
         return redirect()->route('prontuario.create')->with('success', 'Prontuário salvo com sucesso!');
     }
+
+
+   
 }
