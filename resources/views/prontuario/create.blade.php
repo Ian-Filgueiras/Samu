@@ -68,11 +68,11 @@
         <!-- Gravidade -->
         <div class="mb-3">
             <label for="gravidade" class="form-label">Gravidade do Caso</label>
-            <select class="form-select" id="gravidade" name="gravidade" required>
-                <option value="Leve">Leve</option>
-                <option value="Moderado">Moderado</option>
-                <option value="Grave">Grave</option>
-                <option value="Crítico">Crítico</option>
+            <select class="form-select" id="gravidade" name="gravidade_id" required>
+                <option value="1">Leve</option>
+                <option value="2">Moderado</option>
+                <option value="3">Grave</option>
+                <option value="4">Crítico</option>
             </select>
         </div>
 
