@@ -5,10 +5,6 @@ use App\Http\Controllers\ProntuarioController;
 use App\Http\Controllers\HospitalController;
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/painel', function () {
     return view('painel');
 });
 
