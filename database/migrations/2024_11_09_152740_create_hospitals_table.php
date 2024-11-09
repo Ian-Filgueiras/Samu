@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('hospitals', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Nome do hospital
-            $table->string('location'); // Localização (cidade, bairro)
-            $table->integer('total_beds'); // Total de leitos disponíveis
-            $table->integer('available_beds'); // Leitos disponíveis no momento
+            $table->string('name');
+            $table->string('location'); 
+            $table->integer('total_beds'); 
+            $table->integer('available_beds'); 
             $table->timestamps();
         });
     }

@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Prontuario;
 use Illuminate\Http\Request;
 
 class ProntuarioController extends Controller
@@ -24,7 +25,16 @@ class ProntuarioController extends Controller
             'gravidade' => 'required|string',
         ]);
 
-        // Salvando os dados (aqui você pode salvar no banco de dados)
+        Prontuario::create([
+            'nome' => $request->input('nome'),
+            'sexo' => $request->input('sexo'),
+            'cpf' => $request->input('cpf'),
+            'sintomas' => $request->input('sintomas'),
+            'procedimentos' => $request->input('procedimentos'),
+            'medicacoes' => $request->input('medicacoes'),
+            'diagnostico_previo' => $request->input('diagnostico_previo'),
+            'gravidade' => $request->input('gravidade'),
+        ]);
 
         return redirect()->route('prontuario.create')->with('success', 'Prontuário salvo com sucesso!');
     }
