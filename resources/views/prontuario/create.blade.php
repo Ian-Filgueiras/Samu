@@ -16,13 +16,6 @@
 
 <body class="bg-light">
     <div class="container mt-5">
-
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-
         <form action="{{ route('prontuario.store') }}" method="POST">
             @csrf
 
@@ -73,28 +66,28 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input style="transform: translateY(-3px);" class="form-check-input" type="radio"
-                                        name="gridRadios" id="gridRadios4" value="Crítico">
+                                        name="gravidade_id" id="gridRadios4" value="4">
                                     <label class="form-check-label" for="gridRadios4">
                                         Emergência
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input style="transform: translateY(-3px);" class="form-check-input" type="radio"
-                                        name="gridRadios" id="gridRadios3" value="Grave">
+                                        name="gravidade_id" id="gridRadios3" value="3">
                                     <label class="form-check-label" for="gridRadios3">
                                         Urgência
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input style="transform: translateY(-3px);" class="form-check-input" type="radio"
-                                        name="gridRadios" id="gridRadios2" value="Moderado">
+                                        name="gravidade_id" id="gridRadios2" value="2">
                                     <label class="form-check-label" for="gridRadios2">
                                         Pouco Urgente
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input style="transform: translateY(-3px);" class="form-check-input" type="radio"
-                                        name="gridRadios" id="gridRadios1" value="Leve">
+                                        name="gravidade_id" id="gridRadios1" value="1">
                                     <label class="form-check-label" for="gridRadios1">
                                         Não Urgente
                                     </label>
