@@ -53,6 +53,8 @@ function sendLocation(position) {
         .then(data => {
             if (data.status === 'success') {
                 updateMap(data.latitude, data.longitude);
+                const numero = "193";
+                window.location.href = `tel:${numero}`;
             } else {
                 alert('Erro ao enviar a localização.');
             }
