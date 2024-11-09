@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Hospital;
+
 class HospitalSeeder extends Seeder
 {
     /**
@@ -17,6 +18,8 @@ class HospitalSeeder extends Seeder
             'location' => 'Feira de Santana - BA',
             'total_beds' => 150,
             'available_beds' => 50,
+            'latitude' => -12.2415,  // Exemplo de latitude
+            'longitude' => -38.9786, // Exemplo de longitude
         ]);
 
         Hospital::create([
@@ -24,13 +27,17 @@ class HospitalSeeder extends Seeder
             'location' => 'Feira de Santana - BA',
             'total_beds' => 250,
             'available_beds' => 80,
+            'latitude' => -12.2774,  // Exemplo de latitude
+            'longitude' => -38.9405, // Exemplo de longitude
         ]);
 
         Hospital::create([
-            'name' => 'Hospital de Câncer de Feira de Santana',
+            'name' => 'Lopes Rodrigues',
             'location' => 'Feira de Santana - BA',
             'total_beds' => 100,
             'available_beds' => 40,
+            'latitude' => -12.2696,  // Exemplo de latitude
+            'longitude' => -38.9394, // Exemplo de longitude
         ]);
 
         Hospital::create([
@@ -38,13 +45,9 @@ class HospitalSeeder extends Seeder
             'location' => 'Feira de Santana - BA',
             'total_beds' => 120,
             'available_beds' => 50,
+            'latitude' => -12.2750,  // Exemplo de latitude
+            'longitude' => -38.9388, // Exemplo de longitude
         ]);
 
-        Hospital::create([
-            'name' => 'Hospital São Sebastião',
-            'location' => 'Feira de Santana - BA',
-            'total_beds' => 200,
-            'available_beds' => 70,
-        ]);
     }
 }
