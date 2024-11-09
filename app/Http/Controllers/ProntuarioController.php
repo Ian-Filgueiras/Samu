@@ -6,6 +6,20 @@ use Illuminate\Http\Request;
 
 class ProntuarioController extends Controller
 {
+    public function index()
+    {
+
+        $prontuarios = Prontuario::all();
+
+        return view('prontuario.lista', compact('prontuarios'));
+    }
+
+    public function show($id)
+    {
+        $prontuario = Prontuario::findOrFail($id);
+        return view('prontuario.show', compact('prontuario'));
+    }
+
     public function create()
     {
         return view('prontuario.create');
