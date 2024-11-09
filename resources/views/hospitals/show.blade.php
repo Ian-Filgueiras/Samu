@@ -1,4 +1,3 @@
 <h3>{{ $hospital->name }}</h3>
 <p>Localização: {{ $hospital->location }}</p>
-<p>Leitos Disponíveis: {{ $hospital->leitos_disponiveis }} / {{ $hospital->total_leitos }}</p>
-
+<p>Leitos Disponíveis: {{ $hospital->available_beds }} / {{ $hospital->total_beds }}</p>

@@ -10,6 +10,6 @@ class Hospital extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'location', 'total_leitos', 'leitos_disponiveis',
+        'name', 'location', 'total_beds', 'available_beds',
     ];
 }
