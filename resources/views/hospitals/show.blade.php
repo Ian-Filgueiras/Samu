@@ -4,6 +4,8 @@
 
 <link href="{{ asset('css/show.css') }}" rel="stylesheet">
 
+<body style="background-image: url('{{ asset('img/Background.svg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
+
 <div class="container mt-5 pt-5">
     <div class="card mb-3 shadow-sm">
         <div class="card-body">
@@ -14,5 +16,7 @@
         </div>
     </div>
 </div>
+
+</body>
 
 @endsection
